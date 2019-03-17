@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<title>Insert title here</title>
+</head>
+<body>
+<h1>HI THIS FORM GETS DATA NECCESSARY </h1>
+<div>
+<form th:action="@{/post-order}" method="POST" >
+	<div>
+   	<h1>Please type the data(Prosze o zgodnosc danych wejsciowych)</h1>
+    <p>merchant :<input type="text" id="merchantPosId" name="merchantPosId" th:value="${merchantPosId}" /></p>
+    <p>item's decription:<input type="text" id="description" name="description" th:value="${description}" /></p>
+    <p>total amount(w groszach):<input type="text" id="totalAmount" name="totalAmount" th:value="${totalAmount}" /></p>
+    <p>waluta:<input type="text" id="currencyCode" name="currencyCode" th:value="${currencyCode}" /></p>  
+    <p>nazwa produktu:<input type="text" id="name" name="name" th:value="${name}" /></p>
+    <p>cena(w groszach)prosze o zgodnosc:<input type="text" id="unitPrice" name="unitPrice" th:value="${unitPrice}" /></p>
+    <p>ilosc sztuk<input type="text" id="quantity" name="quantity" th:value="${quantity}" /></p>
+    <p>domena sklepu/metoda odbieraj¹ca powiadomienia<input type="text" id="notifyUrl" name="notifyUrl" th:value="${notifyUrl}" /></p>
+    <p><input type="submit" value="Log in" /></p>
+    </div>
+</form>
+</div>
+</body>
+</html>
